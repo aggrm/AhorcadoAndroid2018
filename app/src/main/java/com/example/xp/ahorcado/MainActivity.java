@@ -50,67 +50,65 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    private void chequeaLetra(String _letra)
-    {
+    private void chequeaLetra(String _letra) {
         /*this.findViewById(R.id.layout5).setVisibility(View.INVISIBLE);*/
-        if (numeroFallos < 6) {
-            _letra = _letra.toUpperCase();
+        _letra = _letra.toUpperCase();
 
-            ImageView imagenAhorcado = ((ImageView) findViewById(R.id.imagenAhorcado));                 //Esto es un outler
-            TextView textoGuiones = ((TextView) findViewById(R.id.palabraConGuiones));
-            String palabraConGuiones = textoGuiones.getText().toString();
-            boolean acierto = false;
+        ImageView imagenAhorcado = ((ImageView) findViewById(R.id.imagenAhorcado));                 //Esto es un outler
+        TextView textoGuiones = ((TextView) findViewById(R.id.palabraConGuiones));
+        String palabraConGuiones = textoGuiones.getText().toString();
+        boolean acierto = false;
 
-            for (int i = 0; i < palabraOculta.length(); i++) {
-                if (palabraOculta.charAt(i) == _letra.charAt(0)) {
-                    //quita el guión bajo de la letra correspondiente
-                    palabraConGuiones = palabraConGuiones.substring(0, 2 * i) + _letra
-                            + palabraConGuiones.substring(2 * i + 1);
-                    acierto = true;
-                }
+        for (int i = 0; i < palabraOculta.length(); i++) {
+            if (palabraOculta.charAt(i) == _letra.charAt(0)) {
+                //quita el guión bajo de la letra correspondiente
+                palabraConGuiones = palabraConGuiones.substring(0, 2 * i) + _letra
+                        + palabraConGuiones.substring(2 * i + 1);
+                acierto = true;
             }
-            if (!palabraConGuiones.contains("_"))                                                    //chequeo si se a terminado la partida porque ha acertado todas las letras
-            {
+        }
+        if (!palabraConGuiones.contains("_"))                                                    //chequeo si se a terminado la partida porque ha acertado todas las letras
+        {
 
-                imagenAhorcado.setImageResource(R.drawable.acertastetodo);
-                this.findViewById(R.id.layout1).setVisibility(View.INVISIBLE);
-                this.findViewById(R.id.layout2).setVisibility(View.INVISIBLE);
-                this.findViewById(R.id.layout3).setVisibility(View.INVISIBLE);
-                this.findViewById(R.id.layout4).setVisibility(View.INVISIBLE);
-                this.findViewById(R.id.layout5).setVisibility(View.VISIBLE);
-            }
+            imagenAhorcado.setImageResource(R.drawable.acertastetodo);
+            this.findViewById(R.id.layout1).setVisibility(View.INVISIBLE);
+            this.findViewById(R.id.layout2).setVisibility(View.INVISIBLE);
+            this.findViewById(R.id.layout3).setVisibility(View.INVISIBLE);
+            this.findViewById(R.id.layout4).setVisibility(View.INVISIBLE);
+        }
 
-            textoGuiones.setText(palabraConGuiones);
+        textoGuiones.setText(palabraConGuiones);
 
-            if (!acierto) {
-                numeroFallos++;
-                switch (numeroFallos) {
-                    case 0:
-                        imagenAhorcado.setImageResource(R.drawable.ahorcado_0);
-                        break;
-                    case 1:
-                        imagenAhorcado.setImageResource(R.drawable.ahorcado_1);
-                        break;
-                    case 2:
-                        imagenAhorcado.setImageResource(R.drawable.ahorcado_2);
-                        break;
-                    case 3:
-                        imagenAhorcado.setImageResource(R.drawable.ahorcado_3);
-                        break;
-                    case 4:
-                        imagenAhorcado.setImageResource(R.drawable.ahorcado_4);
-                        break;
-                    case 5:
-                        imagenAhorcado.setImageResource(R.drawable.ahorcado_5);
-                        break;
-                    default:
-                        imagenAhorcado.setImageResource(R.drawable.ahorcado_fin);
-                        Intent i = getBaseContext().getPackageManager()
-                                .getLaunchIntentForPackage(getBaseContext().getPackageName());
-                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(i);
-                        break;
-                }
+        if (!acierto) {
+            numeroFallos++;
+            switch (numeroFallos) {
+                case 0:
+                    imagenAhorcado.setImageResource(R.drawable.ahorcado_0);
+                    break;
+                case 1:
+                    imagenAhorcado.setImageResource(R.drawable.ahorcado_1);
+                    break;
+                case 2:
+                    imagenAhorcado.setImageResource(R.drawable.ahorcado_2);
+                    break;
+                case 3:
+                    imagenAhorcado.setImageResource(R.drawable.ahorcado_3);
+                    break;
+                case 4:
+                    imagenAhorcado.setImageResource(R.drawable.ahorcado_4);
+                    break;
+                case 5:
+                    imagenAhorcado.setImageResource(R.drawable.ahorcado_5);
+                    break;
+                default:
+                    imagenAhorcado.setImageResource(R.drawable.ahorcado_fin);
+                    this.findViewById(R.id.layout1).setVisibility(View.INVISIBLE);
+                    this.findViewById(R.id.layout2).setVisibility(View.INVISIBLE);
+                    this.findViewById(R.id.layout3).setVisibility(View.INVISIBLE);
+                    this.findViewById(R.id.layout4).setVisibility(View.INVISIBLE);
+                    this.findViewById(R.id.layout5).setVisibility(View.VISIBLE);
+                    this.findViewById(R.id.layout6).setVisibility(View.INVISIBLE);
+                    break;
             }
         }
     }

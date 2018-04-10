@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
 
 
     <LinearLayout
@@ -30,15 +30,16 @@
             android:id="@+id/palabraConGuiones"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".40"
-            android:text="_ _ _ _ _ _ _ _ _"
-            android:textSize="50sp"
-            android:orientation="vertical"
             android:layout_gravity="center_horizontal|top"
-            android:gravity="center_vertical|center_horizontal"/>
+            android:layout_weight=".40"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:text="_ _ _ _ _ _ _ _ _"
+            android:textSize="50sp" />
 
 
         <LinearLayout
+            android:id="@+id/layout1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight=".20">
@@ -66,7 +67,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
+                android:background="@android:color/background_light"
                 android:onClick="botonPulsado"
                 android:text="C" />
 
@@ -75,7 +76,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
+                android:background="@android:color/background_light"
                 android:onClick="botonPulsado"
                 android:text="D" />
 
@@ -84,7 +85,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
+                android:background="@android:color/background_light"
                 android:onClick="botonPulsado"
                 android:text="E" />
 
@@ -109,6 +110,7 @@
 
 
         <LinearLayout
+            android:id="@+id/layout2"
             android:layout_width="match_parent"
             android:layout_height=".0dp"
             android:layout_weight=".20">
@@ -136,7 +138,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
+                android:background="@android:color/background_light"
                 android:onClick="botonPulsado"
                 android:text="J" />
 
@@ -145,7 +147,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
+                android:background="@android:color/background_light"
                 android:onClick="botonPulsado"
                 android:text="K" />
 
@@ -154,7 +156,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
+                android:background="@android:color/background_light"
                 android:onClick="botonPulsado"
                 android:text="L" />
 
@@ -178,6 +180,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layout3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight=".20">
@@ -205,7 +208,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
+                android:background="@android:color/background_light"
                 android:onClick="botonPulsado"
                 android:text="P" />
 
@@ -214,7 +217,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
+                android:background="@android:color/background_light"
                 android:onClick="botonPulsado"
                 android:text="Q" />
 
@@ -223,7 +226,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
+                android:background="@android:color/background_light"
                 android:onClick="botonPulsado"
                 android:text="R" />
 
@@ -247,75 +250,103 @@
 
         </LinearLayout>
 
+
         <LinearLayout
+            android:id="@+id/layoutConjunto"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".20">
+            android:layout_weight=".20"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/buttonU"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/holo_red_dark"
-                android:onClick="botonPulsado"
-                android:text="U" />
+            <LinearLayout
+                android:id="@+id/layout4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".20">
 
-            <Button
-                android:id="@+id/buttonV"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/holo_red_dark"
-                android:onClick="botonPulsado"
-                android:text="V" />
+                <Button
+                    android:id="@+id/buttonU"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_dark"
+                    android:onClick="botonPulsado"
+                    android:text="U" />
 
-            <Button
-                android:id="@+id/buttonW"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="botonPulsado"
-                android:text="W"
-                android:background="@android:color/holo_orange_light" />
+                <Button
+                    android:id="@+id/buttonV"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_dark"
+                    android:onClick="botonPulsado"
+                    android:text="v" />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:drawable/ic_popup_sync"
-                android:backgroundTint="@android:color/holo_orange_light"
-                android:text="D"
-                android:visibility="visible" />
+                <Button
+                    android:id="@+id/buttonW"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_dark"
+                    android:onClick="botonPulsado"
+                    android:text="W" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/buttonX"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
-                android:onClick="botonPulsado"
-                android:text="X" />
+            <LinearLayout
+                android:id="@+id/layout5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".20">
 
-            <Button
-                android:id="@+id/buttonY"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/holo_red_dark"
-                android:onClick="botonPulsado"
-                android:text="Y" />
+                <Button
+                    android:id="@+id/buttonVacio"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/ic_popup_sync"
+                    android:backgroundTint="@android:color/background_dark"
+                    android:onClick="botonPulsadoRestart"
+                    android:text="" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/buttonZ"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/holo_red_dark"
-                android:onClick="botonPulsado"
-                android:text="Z" />
+            <LinearLayout
+                android:id="@+id/layout6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".20">
+
+                <Button
+                    android:id="@+id/buttonX"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_dark"
+                    android:onClick="botonPulsado"
+                    android:text="X" />
+
+                <Button
+                    android:id="@+id/buttonY"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_dark"
+                    android:onClick="botonPulsado"
+                    android:text="Y" />
+
+                <Button
+                    android:id="@+id/buttonZ"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_dark"
+                    android:onClick="botonPulsado"
+                    android:text="Z" />
+            </LinearLayout>
+
         </LinearLayout>
+
     </LinearLayout>
 
-
 </LinearLayout>
+
+

@@ -24,24 +24,6 @@
         android:src="@drawable/ahorcado_0" />
 
     <LinearLayout
-        android:id="@+id/layout5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/holo_red_dark"
-            android:onClick="botonPulsado"
-            android:text="¿Quieres jugar de nuevo?"
-            android:textSize="25sp" />
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/layout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,7 +54,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
+            android:background="@android:color/background_light"
             android:onClick="botonPulsado"
             android:text="C"
             android:textSize="25sp" />
@@ -82,7 +64,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
+            android:background="@android:color/background_light"
             android:onClick="botonPulsado"
             android:text="D"
             android:textSize="25sp" />
@@ -92,7 +74,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
+            android:background="@android:color/background_light"
             android:onClick="botonPulsado"
             android:text="E"
             android:textSize="25sp" />
@@ -150,7 +132,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
+            android:background="@android:color/background_light"
             android:onClick="botonPulsado"
             android:text="J"
             android:textSize="25sp" />
@@ -160,7 +142,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
+            android:background="@android:color/background_light"
             android:onClick="botonPulsado"
             android:text="K"
             android:textSize="25sp" />
@@ -170,7 +152,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
+            android:background="@android:color/background_light"
             android:onClick="botonPulsado"
             android:text="L"
             android:textSize="25sp" />
@@ -228,7 +210,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
+            android:background="@android:color/background_light"
             android:onClick="botonPulsado"
             android:text="P"
             android:textSize="25sp" />
@@ -238,7 +220,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
+            android:background="@android:color/background_light"
             android:onClick="botonPulsado"
             android:text="Q"
             android:textSize="25sp" />
@@ -248,7 +230,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
+            android:background="@android:color/background_light"
             android:onClick="botonPulsado"
             android:text="R"
             android:textSize="25sp" />
@@ -273,12 +255,18 @@
             android:text="T"
             android:textSize="25sp" />
     </LinearLayout>
-
+    <LinearLayout
+        android:id="@+id/layoutConjunto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/background_light"
+        android:orientation="horizontal">
     <LinearLayout
         android:id="@+id/layout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:background="@android:color/background_light"
         android:orientation="horizontal">
 
@@ -307,10 +295,19 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
+            android:background="@android:color/background_light"
             android:onClick="botonPulsado"
             android:text="W"
             android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/background_light"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/buttonVacio"
@@ -318,17 +315,26 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:drawable/stat_notify_sync"
-            android:backgroundTint="@android:color/holo_orange_light"
+            android:backgroundTint="@android:color/background_dark"
             android:onClick="botonPulsadoRestart"
             android:text=""
             android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/background_light"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/buttoneX"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
+            android:layout_weight="1.5"
+            android:background="@android:color/background_light"
             android:onClick="botonPulsado"
             android:text="X"
             android:textSize="25sp" />
@@ -352,5 +358,6 @@
             android:onClick="botonPulsado"
             android:text="Z"
             android:textSize="25sp" />
+    </LinearLayout>
     </LinearLayout>
 </LinearLayout>
