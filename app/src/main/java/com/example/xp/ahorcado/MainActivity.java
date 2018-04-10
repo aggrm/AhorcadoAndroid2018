@@ -75,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
             this.findViewById(R.id.layout2).setVisibility(View.INVISIBLE);
             this.findViewById(R.id.layout3).setVisibility(View.INVISIBLE);
             this.findViewById(R.id.layout4).setVisibility(View.INVISIBLE);
+            this.findViewById(R.id.layout5).setVisibility(View.VISIBLE);
+            this.findViewById(R.id.layout6).setVisibility(View.INVISIBLE);
+
         }
 
         textoGuiones.setText(palabraConGuiones);
