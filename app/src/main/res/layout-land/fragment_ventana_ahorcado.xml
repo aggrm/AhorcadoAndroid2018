@@ -253,16 +253,19 @@
 
         <LinearLayout
             android:id="@+id/layoutConjunto"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".20"
-            android:orientation="vertical">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@android:color/background_light"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/layout4"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".20">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.44"
+                android:background="@android:color/background_light"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/buttonU"
@@ -280,23 +283,25 @@
                     android:layout_weight="1"
                     android:background="@android:color/holo_red_dark"
                     android:onClick="botonPulsado"
-                    android:text="v" />
+                    android:text="V" />
 
                 <Button
                     android:id="@+id/buttonW"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/holo_red_dark"
+                    android:background="@android:color/background_light"
                     android:onClick="botonPulsado"
                     android:text="W" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/layout5"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".20">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:background="@android:color/background_light"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/buttonVacio"
@@ -311,16 +316,18 @@
 
             <LinearLayout
                 android:id="@+id/layout6"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".20">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".45"
+                android:background="@android:color/background_light"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/buttonX"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/holo_red_dark"
+                    android:background="@android:color/background_light"
                     android:onClick="botonPulsado"
                     android:text="X" />
 
@@ -344,9 +351,9 @@
             </LinearLayout>
 
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>
+
+
 
 
